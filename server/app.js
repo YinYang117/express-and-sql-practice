@@ -32,7 +32,13 @@ app.use((req, res, next) => {
   next();
 });
 
-
+app.get('/artists', (req, res, next) => {
+  res.statusCode = 200;
+  res.header = {
+    'Content-Type': 'application/json'
+  }
+  res.send(getAllArtists());
+})
 
 
 // DO NOT MODIFY
